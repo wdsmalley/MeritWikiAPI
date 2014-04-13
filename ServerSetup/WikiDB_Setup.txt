@@ -1,0 +1,13 @@
+To set up the wikidb on the server (after server setup complete):
+sudo -u postgres createdb wikidb
+sudo -u postgres createuser -D -A -P postgres
+sudo -u postgres createlang plpgsql
+
+#switch the user to postgres
+su - postgres
+
+#get the DBVersion1.sql from SVN, copy to the server (I created a directory SQLFiles in /home/admin)
+#create the tables
+psql -d wikidb -a -f <wherever you put the file>/DBVersion1_Tables.sql
+#create the functions
+psql -d wikidb -a -f <wherever you put the file>/DBVersion1_Functions.sql
