@@ -11,3 +11,5 @@ su - postgres
 psql -d wikidb -a -f <wherever you put the file>/DBVersion1_Tables.sql
 #create the functions
 psql -d wikidb -a -f <wherever you put the file>/DBVersion1_Functions.sql
+
+or run the Install_testwiki.sh
